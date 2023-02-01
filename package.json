@@ -1,0 +1,16 @@
+{
+  "name": "next-mfe-v13",
+  "workspaces": [
+    "./mfe1",
+    "./shell"
+  ],
+  "version": "0.0.0",
+  "scripts": {
+    "start": "concurrently \"npm --prefix mfe1 run dev\" \"npm --prefix shell run dev\"",
+    "build": "concurrently \"npm --prefix mfe1 run build\" \"npm --prefix shell run build\"",
+    "serve": "concurrently \"npm --prefix mfe1 run start\" \"npm --prefix shell run start\""
+  },
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
